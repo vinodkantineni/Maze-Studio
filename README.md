@@ -1,13 +1,9 @@
 # Maze Studio
 
-![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
-![Flask](https://img.shields.io/badge/flask-2.2.5-green.svg)
-![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)
-![Status](https://img.shields.io/badge/status-active-success.svg)
+
 
 > A modern, interactive web application for generating, solving, and visualizing mazes.
 
-![Maze Studio Banner](https://via.placeholder.com/1200x400?text=Maze+Studio+Demo)
 
 **Maze Studio** is a full-stack demonstration project that combines a robust Python Flask backend with a responsive, vanilla JavaScript frontend. It features real-time maze generation, pathfinding visualization using Breadth-First Search (BFS), and a sleek user interface with customizable themes.
 
