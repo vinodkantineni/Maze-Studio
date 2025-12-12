@@ -1,0 +1,112 @@
+<!-- frontend/index.html -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Maze Studio — Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div id="app">
+        <div class="theme-toggle-wrapper">
+            <label class="theme-switch">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider round"></span>
+            </label>
+            <span class="theme-label">Enable Dark Mode</span>
+        </div>
+        <aside id="panel">
+            <h1>Maze Studio</h1>
+            <div class="row">
+                <label>Rows</label>
+                <input id="rows" type="number" min="4" max="60" value="8" />
+                <label>Cols</label>
+                <input id="cols" type="number" min="4" max="60" value="8" />
+            </div>
+
+            <div class="row">
+                <label>Start (r,c)</label>
+                <input id="start" type="text" value="0,4" />
+            </div>
+            <div class="row">
+                <label>End (r,c)</label>
+                <input id="end" type="text" value="5,5" />
+            </div>
+
+            <div class="controls">
+                <button id="genBtn">Generate Maze</button>
+                <button id="solveBtn">Solve Maze</button>
+                <button id="exportBtn">Export PNG</button>
+            </div>
+
+            <div class="options">
+                <label><input id="showCoords" type="checkbox" /> Show coords</label>
+                <label><input id="showGrid" type="checkbox" checked /> Show grid</label>
+            </div>
+
+            <div class="playback">
+                <label>Speed</label>
+                <input id="speed" type="range" min="20" max="500" value="120" />
+            </div>
+
+            <div id="aiTips">
+                <strong>AI Tips</strong>
+                <p>• Ensure start and end are free cells.<br>• Use Export to save as PNG.</p>
+            </div>
+            <div class="spacer"></div>
+        </aside>
+
+        <main id="main">
+            <canvas id="mazeCanvas"></canvas>
+            <div id="bottomBar">
+                <button id="play">Play</button>
+                <button id="pause">Pause</button>
+                <progress id="progress" value="0" max="100"></progress>
+                <div id="status">Ready</div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Feedback Button -->
+    <button id="feedbackBtn" title="Send Feedback">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10" fill="#FFD700" stroke="none"></circle>
+            <path d="M12 8v4" stroke="#fff" stroke-width="3" stroke-linecap="round"></path>
+            <circle cx="12" cy="16" r="8" fill="#fff"></circle>
+        </svg>
+    </button>
+
+    <!-- Feedback Modal -->
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Feedback</h2>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="fbName">Full Name</label>
+                    <input type="text" id="fbName" required>
+                </div>
+                <div class="form-group">
+                    <label for="fbEmail">Email</label>
+                    <input type="email" id="fbEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="fbProblem">Problem</label>
+                    <textarea id="fbProblem" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="fbSuggestion">Any Suggestion</label>
+                    <textarea id="fbSuggestion" rows="3"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
