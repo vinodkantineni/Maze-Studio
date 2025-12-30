@@ -70,9 +70,7 @@ Follow these instructions to get a copy of the project up and running on your lo
     python backend/app.py
     ```
 
-2.  **Access the App**:
-    Open your web browser and navigate to:
-    [http://localhost:5000](http://localhost:5000)
+
 
 ## 📖 Usage Guide
 
@@ -108,6 +106,6 @@ Contributions are what make the open source community such an amazing place to l
 4.  Push to the Branch (`git push origin feature/AmazingFeature`)
 5.  Open a Pull Request
 
-## 📝 License
+## User Interface
+<img width="1919" height="864" alt="Screenshot 2025-12-27 113337" src="https://github.com/user-attachments/assets/baef9964-b208-4183-9d34-3c6ef72a6cf9" />
 
-Distributed under the MIT License. See `LICENSE` for more information.
